@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App1.MainPage">
+    <StackLayout>
+        <Entry x:Name="n" />
+        <Entry x:Name="n" />
+        <Entry x:Name="n" />
+        <StackLayout>
+            <ListView x:Name= "Stu_List_View"
+        HasUnevenRows ="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Vertical">
+                                <Label Text="{Binding ID}"/>
+                                <Label Text="{Binding Name}"/>
+                                <Label Text="{Binding Department}"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Image x:Name="img1" Source="wow.jpg" Grid.Row="0" Grid.Column="0"/>
+            <Image x:Name="img2" Source="wow2.jpg" Grid.Row="0" Grid.Column="1"/>
+            <Image x:Name="img3" Source="wow3.jpg" Grid.Row="1" Grid.Column="0"/>
+            <Image x:Name="img4" Source="wow4.jpg" Grid.Row="1" Grid.Column="1"/>
+        </Grid>
+
+        <Button x:Name="bt1" Text="Press Me!" Clicked="bt1_Clicked"/>
+        
+        
+        
+    </StackLayout>
+</ContentPage>
